@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import datetime
 from io import BytesIO
 import matplotlib.font_manager as fm
+import platform
 
 
 def init_fonts():
