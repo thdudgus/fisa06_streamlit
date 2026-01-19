@@ -2,10 +2,8 @@ import streamlit as st
 import pandas as pd
 import FinanceDataReader as fdr
 import matplotlib.pyplot as plt
-import koreanize_matplotlib
 import datetime
 from io import BytesIO
-import pytz
 
 # -----------------------------------------------------------------------------
 # 1. 함수 정의
