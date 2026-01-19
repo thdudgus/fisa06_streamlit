@@ -4,6 +4,28 @@ import FinanceDataReader as fdr
 import matplotlib.pyplot as plt
 import datetime
 from io import BytesIO
+import matplotlib.font_manager as fm
+
+
+def init_fonts():
+    system_name = platform.system()
+    if system_name == 'Windows':
+        # 윈도우
+        plt.rc('font', family='Malgun Gothic')
+    elif system_name == 'Darwin': 
+        # 맥(Mac)
+        plt.rc('font', family='AppleGothic')
+    else:
+        # 리눅스 (구글 코랩, 스트림릿 클라우드 등)
+        try:
+            import koreanize_matplotlib
+        except ImportError:
+            pass # 설치가 안되어 있으면 무시 (하지만 깨질 수 있음)
+
+    plt.rc('axes', unicode_minus=False) # 마이너스(-) 기호 깨짐 방지
+
+# 페이지 로드 시 폰트 설정 실행
+init_fonts()
 
 # -----------------------------------------------------------------------------
 # 1. 함수 정의
